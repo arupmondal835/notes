@@ -1,7 +1,12 @@
 # notes
 
-# sshfs
+# restart to pdb
+```bash
+$AMBERHOME/bin/ambpdb -p cram.prmtop -c min_qmmm.rst > min_qmmm.rst.pdb 
 ```
+
+# sshfs
+```bash
 sshfs jklsdjf@jkfjal
 ajklsdfk
 adfjkljasd
