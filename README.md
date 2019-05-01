@@ -1,4 +1,13 @@
-# notes
+ # Table of contents
+ * [Table of contents](#table-of-contents)
+ * [restart to pdb](#restart-to-pdb)
+ * [sshfs](#sshfs)
+ * [float to int](#float-to-int)
+ 
+# create table of content
+```js
+console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
+```
 
 # restart to pdb
 ```bash
