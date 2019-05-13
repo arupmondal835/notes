@@ -10,6 +10,10 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# open a .tgz file
+```bash
+tar xvzf file.tgz
+```
 # vmd
 ```
 resid number means whatever written in the pdb file next to the amino acid
