@@ -10,6 +10,18 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# change datashape from matrix to list
+```python 
+import numpy
+aa = numpy.loadtxt('contact.dat')
+aa
+aa.shape
+for i in range(464):
+    for j in range(464):
+        print(i,j,aa[i,j])
+	aa>0
+```
+	
 # using rosetta
 #exporting path
 ```
