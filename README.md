@@ -10,6 +10,21 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# 2d scatter plot 
+```python
+import numpy as np
+import os
+import pandas
+import matplotlib
+matplotlib.use('Agg')
+from matplotlib import pyplot
+aa = np.loadtxt('trimer_matrix.txt')
+num = np.loadtxt('trimer_modified_clean.txt')
+pyplot.figure()
+pyplot.imshow(aa,cmap='Greys',alpha=0.8,vmin=0)
+pyplot.scatter(num[0],num[1],c=num[2],cmap='cool',s=num[2])
+pyplot.savefig('trimer.png')
+```
 # list to matrix
 ```python
 import numpy as np
@@ -42,8 +57,6 @@ sys.stdout.close()
 ```python
 import numpy as np
 import sys
-aa = np.loadtxt('out.txt')
-sys.stdout=open("1stcolumn.txt","w")
 aa = np.loadtxt('out.txt')
 sys.stdout=open("1stcolumn.txt","w")
 for i in aa[:,:3]:
