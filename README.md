@@ -87,7 +87,7 @@ aa.shape
 for i in range(464):
     for j in range(464):
         print(i,j,aa[i,j])
-	aa>0
+	
 ```
 	
 # using rosetta
