@@ -10,6 +10,19 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# ignoring nearby contacts
+```python
+import numpy as np
+from pandas import DataFrame as df
+import sys
+num = np.loadtxt('pdb_modified.txt')
+sys.stdout=open("pdb_modified_clean.txt","w")
+for i in num[:,:3]:
+    if abs(i[0]-i[1]) > 3:
+        print(int(i[0]),int(i[1]),float(i[2]))
+sys.stdout.close()
+
+```
 # add a constant integer
 ```python
 import numpy as np
