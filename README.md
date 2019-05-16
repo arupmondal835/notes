@@ -10,6 +10,21 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# list to matrix
+```python
+import numpy as np
+from pandas import DataFrame as df
+import sys
+aa = np.loadtxt('pdb_modified_clean.txt')
+aa.shape
+out_matrix = np.zeros( (443,443) )
+for i in aa[:,:3]:
+    if float(i[2]) > 0:
+        out_matrix[int(i[0]),int(i[1])] = i[2]
+        out_matrix[int(i[1]),int(i[0])] = i[2]
+np.savetxt('out_matrix.txt',out_matrix)
+```
+
 # ignoring nearby contacts
 ```python
 import numpy as np
