@@ -10,6 +10,74 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# add a constant integer
+```python
+import numpy as np
+import sys
+aa = np.loadtxt('out.txt')
+sys.stdout=open("1stcolumn.txt","w")
+aa = np.loadtxt('out.txt')
+sys.stdout=open("1stcolumn.txt","w")
+for i in aa[:,:3]:
+    if int(i[0]) > 33:
+        i[0] = i[0]+18
+        
+        print(int(i[0]),int(i[1]),float(i[2]))
+        
+    else:
+              
+        i[0]=i[0]
+        
+        print(int(i[0]),int(i[1]),float(i[2]))
+        
+sys.stdout.close()
+bb = np.loadtxt('1stcolumn.txt')
+sys.stdout=open("2ndcolumn.txt","w")
+for i in bb[:,:3]:
+    if int(i[1]) > 33:
+        i[1] = i[1]+18
+        
+        print(int(i[0]),int(i[1]),float(i[2]))
+        
+    else:
+              
+        i[1]=i[1]
+        
+        print(int(i[0]),int(i[1]),float(i[2]))
+        
+sys.stdout.close()
+cc = np.loadtxt('2ndcolumn.txt')
+sys.stdout=open("1stcolumn1.txt","w")
+for i in cc[:,:3]:
+    if int(i[0]) > 360:
+        i[0] = i[0]+22
+        
+        print(int(i[0]),int(i[1]),float(i[2]))
+        
+    else:
+              
+        i[0]=i[0]
+        
+        print(int(i[0]),int(i[1]),float(i[2]))
+        
+sys.stdout.close()
+dd = np.loadtxt('1stcolumn1.txt')
+sys.stdout=open("2ndcolumn1.txt","w")
+for i in dd[:,:3]:
+    if int(i[1]) > 360:
+        i[1] = i[1]+22
+        
+        print(int(i[0]),int(i[1]),float(i[2]))
+        
+    else:
+              
+        i[1]=i[1]
+        
+        print(int(i[0]),int(i[1]),float(i[2]))
+        
+sys.stdout.close()
+```
+
 # change datashape from matrix to list
 ```python 
 import numpy
