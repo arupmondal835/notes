@@ -10,6 +10,31 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# meld restart after time out
+```bash
+prepare_restart --prepare-run (#then submit the jobscript again)
+```
+# meld adding frame
+```python
+import pickle
+import shutil
+from meld.system import restraints
+
+# backup old files
+shutil.copy("remd_runner.dat", "remd_runner.dat.before_extend")
+shutil.copy("system.dat", "system.dat.before_extend")
+
+# add an extra 500 ns
+runner = pickle.load(open("remd_runner.dat", "rb"))
+runner._max_steps += 10000
+pickle.dump(runner, open("remd_runner.dat", "wb"))
+#this script should be run in Data/Backup directory
+```
+# meld extract last trjectory
+```bash
+extract_trajectory extract_last last (#will be saved last.00.pdb , last.01.pdb..)
+```
+
 # minimization
 ```bash
 relax.static.linuxgccrelease -database /ufrc/alberto.perezant/arup.mondal/Source/Rosetta/rosetta_bin_linux_2019.14.60699_bundle/main/database -s S_00000937.pdb -relax:fast
