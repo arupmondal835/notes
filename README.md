@@ -10,6 +10,12 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# Search a motif:: regular expression
+```sublime text
+K[A-Z]{1,5}X[A-Z]{1,5}P  #crtl+f then select regex then type this command
+[K/R][A-Z]{1,5}[Y/F][A-Z]{1,5}[V/L] #CARC domain
+[V/L][A-Z]{1,5}Y[A-Z]{1,5}[K/R] #CRAC domain
+```
 # reverse the order of all caharcter in all line 
 ```
 sed '/\n/!G;s/\(.\)\(.*\n\)/&\2\1/;//D;s/.//' filename
