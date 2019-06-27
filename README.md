@@ -10,6 +10,15 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# space after one character in vi file
+```
+:%s/\(.\)/\1 /g      #apace after 1 is important and one . is for one spacing after 1 character
+```
+# seach and repalce a string
+```bash
+:s/old/new/g
+:s/[A-Z]/new/g   # for replacing all character not number
+```
 # regular expression with python
 ```python
 import re 
