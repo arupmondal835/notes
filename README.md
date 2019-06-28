@@ -28,7 +28,7 @@ sudo make install
 ```
 # seach and repalce a string
 ```bash
-:s/old/new/g
+:s/old/new/g  #sometime :%s/old/new/g
 :s/[A-Z]/new/g   # for replacing all character not number
 ```
 # regular expression with python
