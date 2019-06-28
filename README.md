@@ -10,6 +10,18 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# installing vmd in ubuntu
+```
+#download vmd file from official site
+cd Downloads
+tar xvf ......tar.gz #eventhouth it's .gz, it is not a zip file
+cd vmd-1.9.3
+./configure LINUXAMD64  #before this sometime we might need to do $install_bin_dir and $install_library_dir
+cd src
+sudo apt-get update #for 1st time, other wise 'make' can not be installed
+sudo apt-get install make 
+sudo make install
+```
 # space after one character in vi file
 ```
 :%s/\(.\)/\1 /g      #apace after 1 is important and one . is for one spacing after 1 character
