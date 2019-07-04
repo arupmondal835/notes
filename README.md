@@ -10,6 +10,14 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# adding a constant integer to all number of a vi file
+```inside file command
+ctrl-v to and drag mouse to select all the numbers(those numbers you want to add integer to)
+shift+colon
+#some <> sign will show there and it s=hould be erased
+then add :%s/\d\+/\=submatch(0)+1/g   #1 because I wanted to add 1
+
+```
 # jnb in hi
 ```
 ssh -L 2018:localhost:2018 arup.mondal@hpg2.rc.ufl.edu
