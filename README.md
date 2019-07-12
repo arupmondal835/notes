@@ -10,6 +10,19 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# removing space from .png and adding multiple png file
+```
+convert input.png -trim output.png
+
+convert +append 1st.png 2nd.png final.png
+```
+# making a column from a string and nmber them
+```bash
+for a in `cat binary.txt `
+do echo $a
+done                    #for numberig just do nl myfile
+```
+
 # adding a constant integer to all number of a vi file
 ```inside file command
 ctrl-v to and drag mouse to select all the numbers(those numbers you want to add integer to)
