@@ -10,6 +10,11 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# deleting blank space in the begining of lines in vi file
+```inside vi file
+:%s/^ \+//g        # space after ^ is important. depneding on number of space you need to dlt, in command oyu should use that many space, and for selected area say line m to n....:m,ns/^ \+//
+```
+
 # login to desktop from mac
 ```
 ssh arup@am.yyrcd.com
