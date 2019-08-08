@@ -10,6 +10,11 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# checking the priority oof submitted job
+```
+squeue -o "%.18i %.9P %.8j %.8u %.2t %.10M %.6D %R %p %Q" |egrep "lijun|arup|alberto"
+```
+
 # deleting blank space in the begining of lines in vi file
 ```inside vi file
 :%s/^ \+//g        # space after ^ is important. depneding on number of space you need to dlt, in command oyu should use that many space, and for selected area say line m to n....:m,ns/^ \+//
