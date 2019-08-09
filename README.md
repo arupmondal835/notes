@@ -13,6 +13,7 @@ console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelecto
 # checking the priority oof submitted job
 ```
 squeue -o "%.18i %.9P %.8j %.8u %.2t %.10M %.6D %R %p %Q" |egrep "lijun|arup|alberto"
+squeue -o "%.18i %.9P %.8j %.8u %.2t %.10M %.6D %R %p %Q" |egrep "lijun|arup|alberto" |grep " R "  |wc -l
 ```
 
 # deleting blank space in the begining of lines in vi file
