@@ -10,6 +10,10 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# add multiple linux account
+```
+go to users and then allow it to be chane by hitting unlock button then click on add user.
+```
 # checking the priority oof submitted job
 ```
 squeue -o "%.18i %.9P %.8j %.8u %.2t %.10M %.6D %R %p %Q" |egrep "lijun|arup|alberto"
