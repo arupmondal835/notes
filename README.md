@@ -10,6 +10,18 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# space separated to tab
+```
+sed 's/ /\t/g' test.log
+```
+# deleting few tab sepated column
+```
+cut -f1,2 tab_ec.txt   #it will keep column 1 and 2 and will dlt everything else
+```
+# tab sep to space sep
+```
+sed 's/\t/ /g' test_ec.txt
+```
 # adding prefix and suffix
 ```
 sed 's/^/I am a /; s/$/ 128... [}/' file.txt
