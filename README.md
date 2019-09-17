@@ -11,7 +11,18 @@
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
 # meld with NMR data
-
+# getting rmsd using cpptraj
+```bash
+trajin step4_1.nc 1 500 1
+parm clean_update.pdb
+reference clean_update.pdb parm clean_update.pdb
+autoimage :1-170
+rms reference :3-165.CA :3-165.CA out rmsd_test.plo
+rms reference :100.CA :100.CA nofit out rmsd_test2.plo
+trajout testrmsd.pdb onlyframes 500
+run
+quit
+```
 
 
 # deleteing any common thing from a vi file globally
