@@ -7,7 +7,10 @@ console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelecto
 ```
 cut -d ' ' --complement -f -10 paste.dat
 ```
-
+# deleting some space separated column
+```
+cut -d" " -f1,2 T0968s2_ECs.txt >contacts.dat
+```
 # appending files columnwise
 ```
 paste rmsd.txt p.dat | column -s $'\t' -t
