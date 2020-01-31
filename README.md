@@ -138,7 +138,6 @@ sudo make install
 ```
 # seach and repalce a string
 ```bash
-:s/old/new/g  #sometime :%s/old/new/g
 :s/[A-Z]/new/g   # for replacing all character not number
 ```
 # regular expression with python
@@ -163,7 +162,7 @@ sed '/\n/!G;s/\(.\)\(.*\n\)/&\2\1/;//D;s/.//' filename
 ```
 cat file.out >> CRAC_CARC.dat
 ```
-# replace a character 
+# replace a character ina certain range of a vi file
 ```
 :n-line/m-lines/old/new/g
 ```
@@ -370,10 +369,6 @@ tar xvzf file.tgz
 resid number means whatever written in the pdb file next to the amino acid
 residue number means it will count the 1st amino acid in pdb as zeroth amino acid and it will count continuously no matter what is written next to each amino acid.
 ```
-# SSHFS command 
-```
-sshfs arup.mondal@hpg2.rc.ufl.edu:/ufrc/alberto.perezant/arup.mondal Hipergator/
-```
 # space after 3 character
 ```
 sed 's/.\{3\}/& /g' originalfile >newfile
@@ -382,18 +377,6 @@ sed 's/.\{3\}/& /g' originalfile >newfile
 ```bash
 awk 'NF{NF-=1};1' <ec.txt >ec.dat
 ```
-# replacing character
-```
-sed -i 's/old/new/g' myfile
-```
-# cutting some line
-
-```
-sed -i '12,100d' myfile
-```
-
-
-
 
 # restart to pdb
 ```bash
