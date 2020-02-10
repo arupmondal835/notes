@@ -3,6 +3,12 @@
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
 
+# gnuplot
+```
+
+plot "trial_4_res_87_300K/topten.dat" ,  "trial_4_res_87_350K/topten.dat" , "trial_4_res_87_400K/topten.dat" , "trial_4_res_350_300K/topten.dat" , "trial_4_res_350_350K/topten.dat" , "trial_4_res_350_400K/topten.dat" , "trial_4_res_700_300K/topten.dat" , "trial_4_res_700_350K/topten.dat" , "trial_4_res_700_400K/topten.dat"
+```
+
 #
 ```
 cut -d ' ' --complement -f -10 paste.dat
