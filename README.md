@@ -13,12 +13,13 @@ console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelecto
 ```
 
 # gnuplot
-```
-
+```bash
+module load gnuplot
+gnuplot
 plot "trial_4_res_87_300K/topten.dat" ,  "trial_4_res_87_350K/topten.dat" , "trial_4_res_87_400K/topten.dat" , "trial_4_res_350_300K/topten.dat" , "trial_4_res_350_350K/topten.dat" , "trial_4_res_350_400K/topten.dat" , "trial_4_res_700_300K/topten.dat" , "trial_4_res_700_350K/topten.dat" , "trial_4_res_700_400K/topten.dat"
 ```
 
-#
+# 
 ```
 cut -d ' ' --complement -f -10 paste.dat
 ```
@@ -130,7 +131,7 @@ shift+colon
 then add :%s/\d\+/\=submatch(0)+1/g   #1 because I wanted to add 1
 
 ```
-# jnb in hi
+# jnb in hipergator
 ```
 ssh -L 2018:localhost:2018 arup.mondal@hpg2.rc.ufl.edu
 ```
