@@ -401,9 +401,7 @@ $AMBERHOME/bin/ambpdb -p cram.prmtop -c min_qmmm.rst > min_qmmm.rst.pdb
 
 # sshfs
 ```bash
-sshfs jklsdjf@jkfjal
-ajklsdfk
-adfjkljasd
+sshfs arup.mondal@hpg2.rc.ufl.edu:/ufrc/alberto.perezant/arup.mondal Mountpoint
 ```
 # float to int
 ```python
