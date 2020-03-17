@@ -2,6 +2,32 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# extracting energy values from post analysed file in amber
+```bash
+awk -f get_energy.awk file
+
+##file is
+
+BEGIN{
+    s = 0
+}
+{
+    if ($0 ~ /^ BOND/) {
+        s += $3 + $6 + $9
+    }
+    if ($0 ~ /^ VDWAALS/) {
+        s += $3 + $6 + $9
+    }
+    if ($0 ~ /^ 1-4 VDW/) {
+        s += $4 + $8 + $11
+        printf "%f \n", s
+        s = 0 
+    }
+}
+
+
+```
+
 # black line after each line
 ```
 sed -e 'G' a.dat
