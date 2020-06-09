@@ -2,6 +2,16 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+
+# how to transfter data between two remote server
+```
+1. log in to a server where you want to copy the data
+2. scp -r arup.mondal@hpg2.rc.ufl.edu:/ufrc/alberto.perezant/arup.mondal/move.sh chemistry/
+use -r for for another remote server, then use the server name and path for the file and then in the end the 
+desitination in the currect logged in server
+```
+
+
 # convert a color pdf to b/w pdf
 ```bash
 gs \
@@ -14,7 +24,6 @@ gs \
  -dBATCH \
  input.pdf
  ```
-
 
 # extracting energy values from post analysed file in amber
 ```bash
