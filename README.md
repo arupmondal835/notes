@@ -11,6 +11,11 @@ use -r for for another remote server, then use the server name and path for the 
 desitination in the currect logged in server
 ```
 
+# unmount 
+```
+fusermount -u orange/
+```
+
 
 # convert a color pdf to b/w pdf
 ```bash
