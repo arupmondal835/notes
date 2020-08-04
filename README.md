@@ -63,17 +63,17 @@ BEGIN{
 
 ```
 
-# black line after each line
+# blank line after each line(alternate black line)
 ```
 sed -e 'G' a.dat
 ```
 
-# swap two column
+# swap two columns
 ```
 %s/\v^(\S+)\s+(\S+).*$/\2 \1/
 ```
 
-# delete all blank line
+# delete all blank lines
 ```
 :g/^$/d
 ```
@@ -85,7 +85,7 @@ gnuplot
 plot "trial_4_res_87_300K/topten.dat" ,  "trial_4_res_87_350K/topten.dat" , "trial_4_res_87_400K/topten.dat" , "trial_4_res_350_300K/topten.dat" , "trial_4_res_350_350K/topten.dat" , "trial_4_res_350_400K/topten.dat" , "trial_4_res_700_300K/topten.dat" , "trial_4_res_700_350K/topten.dat" , "trial_4_res_700_400K/topten.dat"
 ```
 
-# 
+# I do not know what this command was for
 ```
 cut -d ' ' --complement -f -10 paste.dat
 ```
@@ -136,11 +136,11 @@ sacctmgr show qos alberto.perezant format="Name%-16,GrpSubmit,MaxWall,GrpTres%-4
 ```
 sed 's/ /\t/g' test.log
 ```
-# deleting few tab sepated column
+# deleting some tab separated columns
 ```
 cut -f1,2 tab_ec.txt   #it will keep column 1 and 2 and will dlt everything else
 ```
-# tab sep to space sep
+# tab separated to space separated
 ```
 sed 's/\t/ /g' test_ec.txt
 ```
@@ -153,13 +153,13 @@ sed 's/^/I am a /; s/$/ 128... [}/' file.txt
 ```
 go to users and then allow it to be chane by hitting unlock button then click on add user.
 ```
-# checking the priority oof submitted job
+# checking the priority of submitted job
 ```
 squeue -o "%.18i %.9P %.8j %.8u %.2t %.10M %.6D %R %p %Q" |egrep "lijun|arup|alberto"
 squeue -o "%.18i %.9P %.8j %.8u %.2t %.10M %.6D %R %p %Q" |egrep "lijun|arup|alberto" |grep " R "  |wc -l
 ```
 
-# deleting blank space in the begining of lines in vi file
+# deleting blank space in the begining of lines in a vi file
 ```inside vi file
 :%s/^ \+//g        # space after ^ is important. depneding on number of space you need to dlt, in command oyu should use that many space, and for selected area say line m to n....:m,ns/^ \+//
 ```
@@ -182,7 +182,7 @@ convert input.png -trim output.png
 
 convert +append 1st.png 2nd.png final.png
 ```
-# making a column from a string and nmber them
+# making a column from a string and number them
 ```bash
 for a in `cat binary.txt `
 do echo $a
@@ -218,7 +218,7 @@ sudo make install
 ```
 :%s/\(.\)/\1 /g      #apace after 1 is important and one . is for one spacing after 1 character
 ```
-# seach and repalce a string
+# search and replace a string
 ```bash
 :s/[A-Z]/new/g   # for replacing all character not number
 ```
@@ -244,7 +244,7 @@ sed '/\n/!G;s/\(.\)\(.*\n\)/&\2\1/;//D;s/.//' filename
 ```
 cat file.out >> CRAC_CARC.dat
 ```
-# replace a character ina certain range of a vi file
+# replace a character in a certain range of a vi file
 ```
 :n-line/m-lines/old/new/g
 ```
@@ -272,17 +272,17 @@ pickle.dump(runner, open("remd_runner.dat", "wb"))
 ```bash
 extract_trajectory extract_last last (#will be saved last.00.pdb , last.01.pdb..)
 ```
-
-# minimization
+## Using Rosetta
+#minimization
 ```bash
 relax.static.linuxgccrelease -database /ufrc/alberto.perezant/arup.mondal/Source/Rosetta/rosetta_bin_linux_2019.14.60699_bundle/main/database -s S_00000937.pdb -relax:fast
 ```
-# fargment picking
+#fargment picking
 ```bash
 fragment_picker.static.linuxgccrelease -in::file::vall /ufrc/alberto.perezant/arup.mondal/Source/Rosetta/rosetta_bin_linux_2019.14.60699_bundle/main/database/sampling/filtered.vall.dat.2006-05-05.gz -in::file::fasta seq.fa -frags::ss_pred seq.ss2 psipred
 
 ```
-# Extracting pdb from silent file
+#Extracting pdb from silent file
 ```bash
 extract_pdbs.static.linuxgccrelease -in::file::silent default.out -in::file::tags S_00000025
 ```
@@ -451,7 +451,7 @@ tar xvzf file.tgz
 resid number means whatever written in the pdb file next to the amino acid
 residue number means it will count the 1st amino acid in pdb as zeroth amino acid and it will count continuously no matter what is written next to each amino acid.
 ```
-# space after 3 character
+# space after 3 characters
 ```
 sed 's/.\{3\}/& /g' originalfile >newfile
 ```
