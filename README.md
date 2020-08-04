@@ -63,7 +63,7 @@ BEGIN{
 
 ```
 
-# blank line after each line(alternate black line)
+# blank line after each line(alternate blank line)
 ```
 sed -e 'G' a.dat
 ```
