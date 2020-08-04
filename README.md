@@ -3,6 +3,13 @@
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
 
+# put pending job on hold and then release them
+```
+scontrol hold job_id                  ##it will make priority 0 and will not run until we release it
+scontrol release job_id               ##it will release the the job
+```
+
+
 # how to transfter data between two remote server
 ```
 1. log in to a server where you want to copy the data
