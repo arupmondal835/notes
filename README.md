@@ -268,7 +268,7 @@ runner._max_steps += 10000
 pickle.dump(runner, open("remd_runner.dat", "wb"))
 #this script should be run in Data/Backup directory
 ```
-# meld extract last trjectory
+# meld extract last trajectory
 ```bash
 extract_trajectory extract_last last (#will be saved last.00.pdb , last.01.pdb..)
 ```
