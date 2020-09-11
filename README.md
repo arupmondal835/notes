@@ -2,6 +2,18 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+
+# replace username@hostname with some shortcut for ssh login
+```
+go to you local .ssh directory (/home/name/.ssh for ubuntu and /User/name/.ssh for mac)
+create a file names 'config' and inside it write --
+------
+Host x (whatever you want to use for ss login)
+HostName hpg2.rc.ufl.edu
+User yourusername
+------
+now you can log in using 'ssh x' instead of 'ssh yourusername@hpg2.rc.ufl.edu'
+```
 # setting up passphrase for ssh login
 ```
 Step1...go to local .ssh directory and then type "ssh-keygen"
