@@ -2,6 +2,16 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# setting up passphrase for ssh login
+```
+Step1...go to local .ssh directory and then type "ssh-keygen"
+it will print a line saying 'enter file in which to save the key--just hit 'enter'
+then it will ask for passphrase..type it hit enter and retype it.
+Step2..cp id_rsa.pub to your authorized_keys in .ssh directory
+Step3.. ssh-copy-id username@hostname
+then it will ask for the password for log in..
+Then it is all set..from next time it will ask to put the passphrase
+```
 # set up serial/line number in a vi file
 ```
 %s/^/\=printf('%-3d ', line('.'))
