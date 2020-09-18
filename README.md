@@ -6,8 +6,12 @@ console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelecto
 ```
 paste -d \\n file2 file1
 ```
-
-
+# using sublime text
+```
+ctrl +a to select all
+ctrl +shift +l to take curser to end of each line
+shift + 'arrow' to move curser together
+```
 
 # replace username@hostname with some shortcut for ssh login
 ```
