@@ -6,6 +6,10 @@ console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelecto
 ```
 paste -d \\n file2 file1
 ```
+# to put comma after each letter in a string
+```
+sed 's/\(.\{1\}\)/\1,/g' sequence.dat >a.dat
+```
 # using sublime text
 ```
 ctrl +a to select all
