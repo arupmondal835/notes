@@ -2,7 +2,13 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
-# to pase to file with their alternate line
+# upload something on remote github
+``` 
+fork the base directory from github. by that i will have a forked repo in my github
+then upload the files to relevant directory in the forked repo(or we can do git push to forked one)
+then go the original repo and do pull request ---base should be the original one and head should be the forked one with new files
+```
+# to paste to file with their alternate line
 ```
 paste -d \\n file2 file1
 ```
