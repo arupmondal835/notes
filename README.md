@@ -6,6 +6,10 @@ console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelecto
 ```
 > secstruct :69-91 out ss_per_res_prod.dat sumout dssp_prod.agr  #type this command in cpptraj windo after loading parm and traj
 ```
+# adding something to each numbers of a column
+```
+awk -v s=23 '{print $1+s, $2, $3, $4, $5}' csp_satisfied_in_medoid_TP_0.dat >csp_satisfied_in_medoid_TP_0_fixed.dat
+```
 
 # upload something on remote github
 ``` 
