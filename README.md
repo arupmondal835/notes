@@ -2,6 +2,11 @@
 ```js
 console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelectorAll('h1 > a, h2 > a, h3 > a')).map((a) => ( {'H1':' * ','H2':' * ','H3':' - '}[a.parentNode.tagName] + `[${a.parentNode.innerText.trim()}](${a.hash})` )).join('\n') + '\n\n\n' );
 ```
+# calculate secondary struture percent for each residue
+```
+> secstruct :69-91 out ss_per_res_prod.dat sumout dssp_prod.agr  #type this command in cpptraj windo after loading parm and traj
+```
+
 # upload something on remote github
 ``` 
 fork the base directory from github. by that i will have a forked repo in my github
