@@ -12,7 +12,7 @@ awk -v s=23 '{print $1+s, $2, $3, $4, $5}' csp_satisfied_in_medoid_TP_0.dat >csp
 ```
 # add chain code in a pdb
 ```
-sed 's/^\(ATOM.\{17\}\) /\1A/'
+sed 's/^\(ATOM.\{17\}\) /\1A/' x.pdb
 ```
 # upload something on remote github
 ``` 
