@@ -10,7 +10,10 @@ console.log( '\n\n\n # Table of contents\n\n' + Array.from(document.querySelecto
 ```
 awk -v s=23 '{print $1+s, $2, $3, $4, $5}' csp_satisfied_in_medoid_TP_0.dat >csp_satisfied_in_medoid_TP_0_fixed.dat
 ```
-
+# add chain code in a pdb
+```
+sed 's/^\(ATOM.\{17\}\) /\1A/'
+```
 # upload something on remote github
 ``` 
 fork the base directory from github. by that i will have a forked repo in my github
