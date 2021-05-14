@@ -20,7 +20,7 @@ fork the base directory from github. by that i will have a forked repo in my git
 then upload the files to relevant directory in the forked repo(or we can do git push to forked one)
 then go the original repo and do pull request ---base should be the original one and head should be the forked one with new files
 ```
-# to paste to file with their alternate line
+# to paste two file with their alternate line
 ```
 paste -d \\n file2 file1
 ```
