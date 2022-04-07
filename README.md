@@ -49,6 +49,8 @@ create a file names 'config' and inside it write --
 Host x (whatever you want to use for ss login)
 HostName hpg2.rc.ufl.edu
 User yourusername
+Port 2222
+UseKeychain yes
 ------
 now you can log in using 'ssh x' instead of 'ssh yourusername@hpg2.rc.ufl.edu'
 ```
